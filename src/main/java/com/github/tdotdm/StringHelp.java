@@ -5,7 +5,8 @@ import java.util.Optional;
 public class StringHelp extends Help {
     private final String value;
 
-    public StringHelp(final String value) {
+    public StringHelp(final String value) throws HelpException {
+        validate(value);
         this.value = value;
     }
 
