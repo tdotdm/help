@@ -1,4 +1,7 @@
 package com.github.tdotdm;
 
-public class Help {
+public abstract class Help {
+    public static StringHelp with(final String value) {
+        return new StringHelp(value);
+    }
 }
