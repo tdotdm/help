@@ -4,17 +4,26 @@ import org.junit.Test;
 
 import java.util.Optional;
 
-import static com.github.tdotdm.Help.help;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class StringHelpTest {
+
+    @Test
+    public void constructor_ShouldThrowException_WhenGivenNullValue() {
+        //then
+        assertThatThrownBy(() -> new StringHelp(null))
+                .isInstanceOf(HelpException.class);
+    }
+
     @Test
     public void byRemovingWhitespace_ShouldRemoveAllWhitespace() {
         //given
         final String value = "Monday Tuesday Wednesday Thursday Friday Saturday Sunday !";
+        final StringHelp target = new StringHelp(value);
 
         //when
-        final String result = help(value).byRemovingWhitespace();
+        final String result = target.byRemovingWhitespace();
 
         //then
         assertThat(result).isEqualTo("MondayTuesdayWednesdayThursdayFridaySaturdaySunday!");
@@ -24,9 +33,10 @@ public class StringHelpTest {
     public void byConvertingToInteger_ShouldReturnEmptyOptional_WhenGivenInvalidInteger() {
         //given
         final String value = "one";
+        final StringHelp target = new StringHelp(value);
 
         //when
-        final Optional<Integer> result = help(value).byConvertingToInteger();
+        final Optional<Integer> result = target.byConvertingToInteger();
 
         //then
         assertThat(result).isEmpty();
@@ -36,9 +46,10 @@ public class StringHelpTest {
     public void byConvertingToInteger_ShouldReturnInteger_WhenGivenValidInteger() {
         //given
         final String value = "1";
+        final StringHelp target = new StringHelp(value);
 
         //when
-        final Optional<Integer> optionalInteger = help(value).byConvertingToInteger();
+        final Optional<Integer> optionalInteger = target.byConvertingToInteger();
         final Integer result = optionalInteger.get();
 
         //then
