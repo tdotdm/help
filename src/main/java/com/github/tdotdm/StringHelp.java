@@ -6,4 +6,8 @@ public class StringHelp extends Help {
     public StringHelp(final String value) {
         this.value = value;
     }
+
+    public String byRemovingWhitespace() {
+        return this.value.replaceAll("\\s+", "");
+    }
 }
