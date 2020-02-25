@@ -34,4 +34,13 @@ public class HelpTest {
         //then
         assertThat(result).isNotNull();
     }
+
+    @Test
+    public void help_ShouldReturnIntegerHelp_WhenGivenInteger() {
+        //when
+        final IntegerHelp result = Help.help(-1);
+
+        //then
+        assertThat(result).isNotNull();
+    }
 }

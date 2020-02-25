@@ -8,6 +8,10 @@ public abstract class Help {
         return new StringHelp(value);
     }
 
+    public static IntegerHelp help(final Integer value) {
+        return new IntegerHelp(value);
+    }
+
     public static ListHelp help(final List<?> value) {
         return new ListHelp(value);
     }
