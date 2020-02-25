@@ -11,10 +11,6 @@ import java.util.Set;
  * will return the StringHelp class.
  * */
 public abstract class Help {
-    public static StringHelp help(final String value) {
-        return new StringHelp(value);
-    }
-
     public static IntegerHelp help(final Integer value) {
         return new IntegerHelp(value);
     }
@@ -25,6 +21,10 @@ public abstract class Help {
 
     public static SetHelp help(final Set<?> value) {
         return new SetHelp(value);
+    }
+
+    public static StringHelp help(final String value) {
+        return new StringHelp(value);
     }
 
     protected void validate(final Object... objects) {
