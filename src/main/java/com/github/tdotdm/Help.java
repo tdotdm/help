@@ -1,10 +1,15 @@
 package com.github.tdotdm;
 
+import java.util.List;
 import java.util.Set;
 
 public abstract class Help {
     public static StringHelp help(final String value) {
         return new StringHelp(value);
+    }
+
+    public static ListHelp help(final List<?> value) {
+        return new ListHelp(value);
     }
 
     public static SetHelp help(final Set<?> value) {
