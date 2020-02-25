@@ -2,6 +2,11 @@ package com.github.tdotdm;
 
 import java.util.Optional;
 
+/*
+ * Class storing multiple
+ * utility methods relating to
+ * String.
+ * */
 public class StringHelp extends Help {
     private final String value;
 

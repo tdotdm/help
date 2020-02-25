@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+/*
+ * Class storing multiple
+ * utility methods relating to
+ * Set.
+ * */
 public class SetHelp extends Help {
     private final Set<?> value;
 

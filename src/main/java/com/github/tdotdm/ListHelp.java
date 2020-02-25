@@ -5,6 +5,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/*
+ * Class storing multiple
+ * utility methods relating to
+ * List.
+ * */
 public class ListHelp extends Help {
     private final List<?> value;
 

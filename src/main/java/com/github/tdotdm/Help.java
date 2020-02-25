@@ -3,6 +3,13 @@ package com.github.tdotdm;
 import java.util.List;
 import java.util.Set;
 
+/*
+ * Factory to return various
+ * helper classes.
+ *
+ * For example, Help.help("my_string");
+ * will return the StringHelp class.
+ * */
 public abstract class Help {
     public static StringHelp help(final String value) {
         return new StringHelp(value);

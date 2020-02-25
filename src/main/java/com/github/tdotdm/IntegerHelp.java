@@ -1,5 +1,10 @@
 package com.github.tdotdm;
 
+/*
+ * Class storing multiple
+ * utility methods relating to
+ * Integer.
+ * */
 public class IntegerHelp extends Help {
     private final Integer value;
 
