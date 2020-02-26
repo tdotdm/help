@@ -16,6 +16,7 @@ See below for details on all available methods.
 | 5 | byConvertingToInteger | String | Optional | Convert a String into an Integer. |
 
 For a more concrete example, to use the method with id 5 (`byConvertingToInteger`), you can do the following:
+
 `final Optional<Integer> myInteger = Help.help("1").byConvertingToInteger();`
 #### Installation
 You can download the Jar from [the Packages page](https://github.com/tdotdm/help/packages) or, alternatively, if you are using Maven/Gradle,
