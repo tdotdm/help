@@ -29,4 +29,39 @@ you can add a new dependency. See below for an example.
 </dependency>
 ```
 
+As Help is stored on GitHub Packages, you will need to update your `settings.xml` file with a new profile and server. See below for an example.
+```
+<profiles>
+    <profile>
+        <id>github</id>
+        <repositories>
+            <repository>
+                <id>central</id>
+                <url>https://repo1.maven.org/maven2</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+            </repository>
+            <repository>
+                <id>github</id>
+                <name>GitHub tdotdm Apache Maven Packages</name>
+                <url>https://maven.pkg.github.com/tdotdm/help</url>
+            </repository>
+        </repositories>
+    </profile>
+</profiles>
+<servers>
+    <server>
+        <id>github</id>
+        <username>YOUR_USERNAME</username>
+        <password>YOUR_GITHUB_TOKEN</password>
+    </server>
+</servers>
+```
+#### Notes
+* Read more about GitHub and GitHub Packages [here](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-apache-maven-for-use-with-github-packages).
+
 
