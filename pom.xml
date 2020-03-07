@@ -7,6 +7,7 @@
     <artifactId>help</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
+    <description>Help is a collection of utility methods with a fluent interface.</description>
     <build>
         <finalName>help</finalName>
         <plugins>
