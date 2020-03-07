@@ -7,7 +7,7 @@ import java.util.Optional;
  * utility methods relating to
  * String.
  * */
-public class StringHelp extends Help {
+public final class StringHelp extends Help {
     private final String value;
 
     public StringHelp(final String value) throws HelpException {

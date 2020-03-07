@@ -5,8 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.tdotdm</groupId>
     <artifactId>help</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
+    <description>Help is a collection of utility methods with a fluent interface.</description>
     <build>
         <finalName>help</finalName>
         <plugins>

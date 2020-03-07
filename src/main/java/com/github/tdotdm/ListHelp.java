@@ -10,7 +10,7 @@ import java.util.Set;
  * utility methods relating to
  * List.
  * */
-public class ListHelp extends Help {
+public final class ListHelp extends Help {
     private final List<?> value;
 
     public ListHelp(final List<?> value) {
