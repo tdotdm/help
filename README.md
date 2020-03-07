@@ -1,5 +1,5 @@
 # Help
-Written in Java, Help is a collection of utility methods with a fluent interface. 
+Help is a collection of utility methods with a fluent interface. 
 #### Inspiration
 I dislike having several utility classes with their own interface, style and approach. Therefore, I wanted to create a suite of utility
 classes that were all accessible through one standard entry point. Second, I like the intuitive nature of fluent interfaces, [AssertJ](https://assertj.github.io/doc/) as an example,
