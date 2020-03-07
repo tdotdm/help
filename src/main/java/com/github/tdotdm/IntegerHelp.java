@@ -5,7 +5,7 @@ package com.github.tdotdm;
  * utility methods relating to
  * Integer.
  * */
-public class IntegerHelp extends Help {
+public final class IntegerHelp extends Help {
     private final Integer value;
 
     public IntegerHelp(final Integer value) {
