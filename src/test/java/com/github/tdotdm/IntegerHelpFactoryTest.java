@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class IntegerHelpTest {
+public class IntegerHelpFactoryTest {
     @Test
     public void constructor_ShouldThrowException_WhenGivenNullValue() {
         //then

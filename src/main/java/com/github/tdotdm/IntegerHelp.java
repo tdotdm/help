@@ -5,15 +5,9 @@ package com.github.tdotdm;
  * utility methods relating to
  * Integer.
  * */
-public final class IntegerHelp {
-    private final Integer value;
-
+public final class IntegerHelp extends Help<Integer> {
     public IntegerHelp(final Integer value) {
-        if (value == null) {
-            throw new IllegalArgumentException();
-        }
-
-        this.value = value;
+        super(value);
     }
 
     public final boolean byCheckingNotExceedingBoundary(final Integer lowerBoundary,
@@ -22,6 +16,6 @@ public final class IntegerHelp {
             throw new HelpException("Lower is greater than Upper!");
         }
 
-        return this.value >= lowerBoundary && this.value <= upperBoundary;
+        return value >= lowerBoundary && this.value <= upperBoundary;
     }
 }

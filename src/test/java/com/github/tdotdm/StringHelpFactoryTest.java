@@ -7,7 +7,7 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class StringHelpTest {
+public class StringHelpFactoryTest {
 
     @Test
     public void constructor_ShouldThrowException_WhenGivenNullValue() {

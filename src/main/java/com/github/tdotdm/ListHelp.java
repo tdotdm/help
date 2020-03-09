@@ -10,15 +10,9 @@ import java.util.Set;
  * utility methods relating to
  * List.
  * */
-public final class ListHelp {
-    private final List<?> value;
-
+public final class ListHelp extends Help<List<?>> {
     public ListHelp(final List<?> value) {
-        if (value == null) {
-            throw new IllegalArgumentException();
-        }
-
-        this.value = value;
+        super(value);
     }
 
     public final List<?> byRemovingDuplicates() {
