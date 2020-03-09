@@ -18,7 +18,7 @@ public final class ListHelp extends Help {
         this.value = value;
     }
 
-    public List<?> byRemovingDuplicates() {
+    public final List<?> byRemovingDuplicates() {
         final Set<?> valueSet = new HashSet<>(value);
 
         return new ArrayList<>(valueSet);

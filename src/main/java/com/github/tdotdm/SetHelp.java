@@ -17,7 +17,7 @@ public final class SetHelp extends Help {
         this.value = value;
     }
 
-    public List<?> byChangingToList() {
+    public final List<?> byChangingToList() {
         return new ArrayList<>(this.value);
     }
 }

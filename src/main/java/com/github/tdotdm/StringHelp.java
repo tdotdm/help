@@ -15,11 +15,11 @@ public final class StringHelp extends Help {
         this.value = value;
     }
 
-    public String byRemovingWhitespace() {
+    public final String byRemovingWhitespace() {
         return this.value.replaceAll("\\s+", "");
     }
 
-    public Optional<Integer> byConvertingToInteger() {
+    public final Optional<Integer> byConvertingToInteger() {
         try {
             final int result = Integer.parseInt(this.value);
             return Optional.of(result);

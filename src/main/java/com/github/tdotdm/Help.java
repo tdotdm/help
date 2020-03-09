@@ -27,7 +27,7 @@ public abstract class Help {
         return new StringHelp(value);
     }
 
-    protected void validate(final Object... objects) {
+    protected final void validate(final Object... objects) {
         for (Object object : objects) {
             if (object == null) {
                 throw new HelpException("Cannot create Help with illegal arguments!");

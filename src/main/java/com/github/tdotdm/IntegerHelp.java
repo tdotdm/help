@@ -13,8 +13,8 @@ public final class IntegerHelp extends Help {
         this.value = value;
     }
 
-    public boolean byCheckingNotExceedingBoundary(final Integer lowerBoundary,
-                                                  final Integer upperBoundary) {
+    public final boolean byCheckingNotExceedingBoundary(final Integer lowerBoundary,
+                                                        final Integer upperBoundary) {
         if ((lowerBoundary.equals(upperBoundary)) || lowerBoundary > upperBoundary) {
             throw new HelpException("Lower is greater than Upper!");
         }
