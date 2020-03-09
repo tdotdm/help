@@ -5,12 +5,12 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class IntegerHelpFactoryTest {
+public class IntegerHelpTest {
     @Test
     public void constructor_ShouldThrowException_WhenGivenNullValue() {
         //then
         assertThatThrownBy(() -> new IntegerHelp(null))
-                .isInstanceOf(HelpException.class);
+                .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
