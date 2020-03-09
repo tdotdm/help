@@ -7,14 +7,10 @@ import java.util.Optional;
 import static org.junit.Assert.assertEquals;
 
 /*
- * The following class details
- * examples of how a client may
- * extend 'HelpFactory' with
- * custom behaviour.
- *
- * To do this, create a class which
- * extends 'HelpFactory' and supply
- * overloaded 'help' methods.
+ * The following class details examples
+ * of how a client may extend Help with custom behaviour.
+ * To extend Help with custom behaviour,
+ * simply extend 'HelpFactory' and supply overloaded 'help' methods.
  * */
 public class ClientExample {
     @Test
