@@ -5,11 +5,14 @@ package com.github.tdotdm;
  * utility methods relating to
  * Integer.
  * */
-public final class IntegerHelp extends Help {
+public final class IntegerHelp {
     private final Integer value;
 
     public IntegerHelp(final Integer value) {
-        validate(value);
+        if (value == null) {
+            throw new IllegalArgumentException();
+        }
+
         this.value = value;
     }
 

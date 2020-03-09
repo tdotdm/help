@@ -10,11 +10,14 @@ import java.util.Set;
  * utility methods relating to
  * List.
  * */
-public final class ListHelp extends Help {
+public final class ListHelp {
     private final List<?> value;
 
     public ListHelp(final List<?> value) {
-        validate(value);
+        if (value == null) {
+            throw new IllegalArgumentException();
+        }
+
         this.value = value;
     }
 
