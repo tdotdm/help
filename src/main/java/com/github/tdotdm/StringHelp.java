@@ -12,11 +12,11 @@ public final class StringHelp extends Help<String> {
         super(value);
     }
 
-    public final String byRemovingWhitespace() {
+    public String byRemovingWhitespace() {
         return this.value.replaceAll("\\s+", "");
     }
 
-    public final Optional<Integer> byConvertingToInteger() {
+    public Optional<Integer> byConvertingToInteger() {
         try {
             final int result = Integer.parseInt(this.value);
             return Optional.of(result);

@@ -14,7 +14,7 @@ public final class SetHelp extends Help<Set<?>> {
         super(value);
     }
 
-    public final List<?> byChangingToList() {
+    public List<?> byChangingToList() {
         return new ArrayList<>(this.value);
     }
 }

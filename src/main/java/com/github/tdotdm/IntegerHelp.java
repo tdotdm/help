@@ -10,8 +10,8 @@ public final class IntegerHelp extends Help<Integer> {
         super(value);
     }
 
-    public final boolean byCheckingNotExceedingBoundary(final Integer lowerBoundary,
-                                                        final Integer upperBoundary) {
+    public boolean byCheckingNotExceedingBoundary(final Integer lowerBoundary,
+                                                  final Integer upperBoundary) {
         if ((lowerBoundary.equals(upperBoundary)) || lowerBoundary > upperBoundary) {
             throw new HelpException("Lower is greater than Upper!");
         }
