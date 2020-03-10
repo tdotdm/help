@@ -10,7 +10,7 @@ public class IntegerHelpTest {
     public void constructor_ShouldThrowException_WhenGivenNullValue() {
         //then
         assertThatThrownBy(() -> new IntegerHelp(null))
-                .isInstanceOf(HelpException.class);
+                .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test

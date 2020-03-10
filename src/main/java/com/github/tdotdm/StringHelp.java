@@ -7,12 +7,9 @@ import java.util.Optional;
  * utility methods relating to
  * String.
  * */
-public final class StringHelp extends Help {
-    private final String value;
-
-    public StringHelp(final String value) throws HelpException {
-        validate(value);
-        this.value = value;
+public final class StringHelp extends Help<String> {
+    public StringHelp(final String value) {
+        super(value);
     }
 
     public String byRemovingWhitespace() {

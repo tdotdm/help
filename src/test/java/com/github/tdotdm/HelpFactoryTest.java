@@ -7,11 +7,11 @@ import java.util.HashSet;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class HelpTest {
+public class HelpFactoryTest {
     @Test
     public void help_ShouldReturnStringHelp_WhenGivenString() {
         //when
-        final StringHelp result = Help.help("string");
+        final StringHelp result = HelpFactory.help("string");
 
         //then
         assertThat(result).isNotNull();
@@ -20,7 +20,7 @@ public class HelpTest {
     @Test
     public void help_ShouldReturnListHelp_WhenGivenSet() {
         //when
-        final ListHelp result = Help.help(new ArrayList<>());
+        final ListHelp result = HelpFactory.help(new ArrayList<>());
 
         //then
         assertThat(result).isNotNull();
@@ -29,7 +29,7 @@ public class HelpTest {
     @Test
     public void help_ShouldReturnSetHelp_WhenGivenSet() {
         //when
-        final SetHelp result = Help.help(new HashSet<>());
+        final SetHelp result = HelpFactory.help(new HashSet<>());
 
         //then
         assertThat(result).isNotNull();
@@ -38,7 +38,7 @@ public class HelpTest {
     @Test
     public void help_ShouldReturnIntegerHelp_WhenGivenInteger() {
         //when
-        final IntegerHelp result = Help.help(-1);
+        final IntegerHelp result = HelpFactory.help(-1);
 
         //then
         assertThat(result).isNotNull();

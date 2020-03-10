@@ -9,12 +9,9 @@ import java.util.Set;
  * utility methods relating to
  * Set.
  * */
-public final class SetHelp extends Help {
-    private final Set<?> value;
-
+public final class SetHelp extends Help<Set<?>> {
     public SetHelp(final Set<?> value) {
-        validate(value);
-        this.value = value;
+        super(value);
     }
 
     public List<?> byChangingToList() {

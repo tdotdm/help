@@ -10,12 +10,9 @@ import java.util.Set;
  * utility methods relating to
  * List.
  * */
-public final class ListHelp extends Help {
-    private final List<?> value;
-
+public final class ListHelp extends Help<List<?>> {
     public ListHelp(final List<?> value) {
-        validate(value);
-        this.value = value;
+        super(value);
     }
 
     public List<?> byRemovingDuplicates() {

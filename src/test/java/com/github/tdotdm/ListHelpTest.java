@@ -14,7 +14,7 @@ public class ListHelpTest {
     public void constructor_ShouldThrowException_WhenGivenNullValue() {
         //then
         assertThatThrownBy(() -> new ListHelp(null))
-                .isInstanceOf(HelpException.class);
+                .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test

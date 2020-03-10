@@ -13,7 +13,7 @@ public class StringHelpTest {
     public void constructor_ShouldThrowException_WhenGivenNullValue() {
         //then
         assertThatThrownBy(() -> new StringHelp(null))
-                .isInstanceOf(HelpException.class);
+                .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
