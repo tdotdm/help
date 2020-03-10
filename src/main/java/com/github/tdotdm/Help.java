@@ -11,6 +11,6 @@ public class Help<T> {
     }
 
     public T getValue() {
-        return value;
+        return this.value;
     }
 }
