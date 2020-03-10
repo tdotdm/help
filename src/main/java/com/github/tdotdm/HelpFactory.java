@@ -7,7 +7,7 @@ import java.util.Set;
  * Factory to return various
  * helper classes.
  *
- * For example, Help.help("my_string");
+ * For example, HelpFactory.help("my_string");
  * will return the StringHelp class.
  * */
 public abstract class HelpFactory {
