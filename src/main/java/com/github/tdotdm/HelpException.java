@@ -1,9 +1,11 @@
 package com.github.tdotdm;
 
-/*
- * Custom runtime exception used
- * for the Help library.
- * */
+/**
+ * The core exception used for Help.
+ *
+ * @author Darryn McGaw
+ * @since 2.0.0
+ */
 public final class HelpException extends RuntimeException {
     public HelpException() {
         //ignore

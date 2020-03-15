@@ -1,10 +1,12 @@
 package com.github.tdotdm;
 
-/*
- * Class storing multiple
- * utility methods relating to
- * Boolean.
- * */
+/**
+ * Utility class strictly concerned
+ * with a Boolean value.
+ *
+ * @author Darryn McGaw
+ * @since 2.0.0
+ */
 public final class BooleanHelp extends Help<Boolean> {
     public BooleanHelp(final Boolean value) {
         super(value);
@@ -26,6 +28,14 @@ public final class BooleanHelp extends Help<Boolean> {
         }
     }
 
+    /**
+     * Return a given value depending on the state of
+     * BooleanHelp's value.
+     *
+     * @param valueWhenTrue  The String to return when BooleanHelp's value is true.
+     * @param valueWhenFalse The String to return when BooleanHelp's value is false.
+     * @return The value depending on the state of the class's value.
+     */
     public String byReturning(final String valueWhenTrue,
                               final String valueWhenFalse) {
         validate(valueWhenTrue, "Illegal 'valueWhenTrue'.");
@@ -34,6 +44,15 @@ public final class BooleanHelp extends Help<Boolean> {
         return value(valueWhenTrue, valueWhenFalse);
     }
 
+    /**
+     * Return a given value depending on the state of
+     * BooleanHelp's value.
+     *
+     * @param valueWhenTrue  The String to return when BooleanHelp's value is true.
+     * @param valueWhenFalse The String to return when BooleanHelp's value is false.
+     * @param defaultValue   The String to return when BooleanHelp's value is null.
+     * @return The value depending on the state of the class's value.
+     */
     public String byReturning(final String valueWhenTrue,
                               final String valueWhenFalse,
                               final String defaultValue) {

@@ -8,6 +8,18 @@
     <version>2.0.0</version>
     <packaging>jar</packaging>
     <description>Help is a collection of utility methods with a fluent interface.</description>
+    <developers>
+        <developer>
+            <id>tdotdm</id>
+            <name>Darryn McGaw</name>
+            <organization>-</organization>
+            <organizationUrl>0</organizationUrl>
+            <roles>
+                <role>Software Developer</role>
+            </roles>
+            <timezone>Europe/London</timezone>
+        </developer>
+    </developers>
     <build>
         <finalName>help</finalName>
         <plugins>

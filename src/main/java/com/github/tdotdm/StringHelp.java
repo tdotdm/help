@@ -2,20 +2,33 @@ package com.github.tdotdm;
 
 import java.util.Optional;
 
-/*
- * Class storing multiple
- * utility methods relating to
- * String.
- * */
+/**
+ * Utility class strictly concerned
+ * with a String value.
+ *
+ * @author Darryn McGaw
+ * @since 2.0.0
+ */
 public final class StringHelp extends Help<String> {
     public StringHelp(final String value) {
         super(value);
     }
 
+    /**
+     * Remove all whitespace from StringHelp's value.
+     *
+     * @return StringHelp's value, wherein, all whitespace has been removed.
+     */
     public String byRemovingWhitespace() {
         return this.value.replaceAll("\\s+", "");
     }
 
+    /**
+     * Convert StringHelp's value into an Integer.
+     *
+     * @return An Optional, wherein, the present value
+     * will be an Integer representation of StringHelp's value.
+     */
     public Optional<Integer> byConvertingToInteger() {
         try {
             final int result = Integer.parseInt(this.value);
