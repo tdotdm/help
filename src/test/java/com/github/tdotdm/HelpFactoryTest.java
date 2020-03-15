@@ -9,6 +9,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class HelpFactoryTest {
     @Test
+    public void help_ShouldReturnBooleanHelp_WhenGivenBoolean() {
+        //when
+        final BooleanHelp result = HelpFactory.help(Boolean.TRUE);
+
+        //then
+        assertThat(result).isNotNull();
+    }
+
+    @Test
     public void help_ShouldReturnStringHelp_WhenGivenString() {
         //when
         final StringHelp result = HelpFactory.help("string");

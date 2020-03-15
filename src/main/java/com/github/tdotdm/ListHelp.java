@@ -5,16 +5,23 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-/*
- * Class storing multiple
- * utility methods relating to
- * List.
- * */
+/**
+ * Utility class strictly concerned
+ * with a List value.
+ *
+ * @author Darryn McGaw
+ * @since 2.0.0
+ */
 public final class ListHelp extends Help<List<?>> {
     public ListHelp(final List<?> value) {
         super(value);
     }
 
+    /**
+     * Remove duplicate entries from ListHelp's value
+     *
+     * @return A new List containing unique entries of ListHelp's value.
+     */
     public List<?> byRemovingDuplicates() {
         final Set<?> valueSet = new HashSet<>(value);
 

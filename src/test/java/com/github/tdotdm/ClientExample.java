@@ -6,12 +6,12 @@ import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
 
-/*
- * The following class details examples
- * of how a client may extend Help with custom behaviour.
- * To extend Help with custom behaviour,
- * simply extend 'HelpFactory' and supply overloaded 'help' methods.
- * */
+/**
+ * The following class details examples of how a client
+ * may extend Help with custom behaviour. To extend
+ * Help with custom behaviour, simply extend 'HelpFactory'
+ * and supply overloaded 'help' methods.
+ */
 public class ClientExample {
     @Test
     public void personExample() {
