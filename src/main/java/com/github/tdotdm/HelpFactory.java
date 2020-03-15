@@ -11,6 +11,10 @@ import java.util.Set;
  * will return the StringHelp class.
  * */
 public abstract class HelpFactory {
+    public static BooleanHelp help(final Boolean value) {
+        return new BooleanHelp(value);
+    }
+
     public static IntegerHelp help(final Integer value) {
         return new IntegerHelp(value);
     }
