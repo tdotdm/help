@@ -14,6 +14,8 @@ See below for details on all available methods.
 | 3 | byChangingToList | Set |List | Convert a Set into a List. |
 | 4 | byRemovingWhitespace | String | String | Remove all whitespace from a String. |
 | 5 | byConvertingToInteger | String | Optional | Convert a String into an Integer. |
+| 6 | byReturning | String, String | String | Return a given value (excluding a default value) depending on the state of a Boolean value. |
+| 7 | byReturning | String, String, String | String | Return a given value (including a default value) depending on the state of a Boolean value. |
 
 For a more concrete example, to use the method with id 5 (`byConvertingToInteger`), you can do the following:
 
