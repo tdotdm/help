@@ -14,8 +14,10 @@ See below for details on all available methods.
 | 3 | byChangingToList | Set |List | Convert a Set into a List. |
 | 4 | byRemovingWhitespace | String | String | Remove all whitespace from a String. |
 | 5 | byConvertingToInteger | String | Optional | Convert a String into an Integer. |
-| 6 | byReturning | Boolean | String | Return a given value (excluding a default value) depending on the state of a Boolean value. |
-| 7 | byReturning | Boolean | String | Return a given value (including a default value) depending on the state of a Boolean value. |
+| 6 | byReturning | boolean | String | Return a given value (excluding a default value) depending on the state of a boolean value. |
+| 7 | byReturning | boolean | String | Return a given value (including a default value) depending on the state of a boolean value. |
+| 8 | byConfirmingValueIsPresent | String | boolean | Confirm whether a sub-String is wholly & independently present within a String (case sensitive). |
+| 9 | byConfirmingValueIsPresentIgnoringCase | String | boolean | Confirm whether a sub-String is wholly & independently present within a String (case insensitive). |
 
 For a more concrete example, to use the method with id 5 (`byConvertingToInteger`), you can do the following:
 
