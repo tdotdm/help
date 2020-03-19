@@ -30,7 +30,7 @@ you can add a new dependency. See below for an example.
 <dependency>
     <groupId>com.github.tdotdm</groupId> 
     <artifactId>help</artifactId>
-    <version>2.0.1</version>
+    <version>2.1.0</version>
 </dependency>
 ```
 
