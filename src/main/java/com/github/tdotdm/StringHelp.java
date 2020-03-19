@@ -37,4 +37,18 @@ final class StringHelp extends Help<String> {
             return Optional.empty();
         }
     }
+
+    /**
+     * Confirm whether StringHelp's value contains
+     * the exact given value. For example, given StringHelp's
+     * value is 'women', querying for 'men' will return false.
+     * Please note that this method is case sensitive.
+     *
+     * @param query The value to search StringHelp's value for.
+     * @return Whether StringHelp's value contains the given query.
+     */
+    boolean byConfirmingValueIsPresent(final String query) {
+        final String regex = ".*\\b" + query + "\\b.*";
+        return this.value.matches(regex);
+    }
 }
