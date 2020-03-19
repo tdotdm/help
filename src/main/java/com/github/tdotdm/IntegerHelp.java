@@ -8,6 +8,11 @@ package com.github.tdotdm;
  * @since 2.0.0
  */
 final class IntegerHelp extends Help<Integer> {
+    /**
+     * Constant to identify IntegerHelp through a String context.
+     */
+    public static final String IDENTIFIER = "IntegerHelp";
+
     IntegerHelp(final Integer value) {
         super(value);
     }
@@ -22,7 +27,7 @@ final class IntegerHelp extends Help<Integer> {
      * exceeds the given limit.
      */
     boolean byCheckingNotExceedingBoundary(final Integer lowerBoundary,
-                                                  final Integer upperBoundary) {
+                                           final Integer upperBoundary) {
         if ((lowerBoundary.equals(upperBoundary)) || lowerBoundary > upperBoundary) {
             throw new HelpException("Lower is greater than Upper!");
         }

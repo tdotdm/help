@@ -8,6 +8,11 @@ package com.github.tdotdm;
  * @since 2.0.0
  */
 final class BooleanHelp extends Help<Boolean> {
+    /**
+     * Constant to identify BooleanHelp through a String context.
+     */
+    public static final String IDENTIFIER = "BooleanHelp";
+
     BooleanHelp(final Boolean value) {
         super(value);
     }

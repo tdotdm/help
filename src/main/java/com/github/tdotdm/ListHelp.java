@@ -13,6 +13,11 @@ import java.util.Set;
  * @since 2.0.0
  */
 final class ListHelp extends Help<List<?>> {
+    /**
+     * Constant to identify ListHelp through a String context.
+     */
+    public static final String IDENTIFIER = "ListHelp";
+
     ListHelp(final List<?> value) {
         super(value);
     }

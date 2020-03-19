@@ -12,6 +12,11 @@ import java.util.Set;
  * @since 2.0.0
  */
 final class SetHelp extends Help<Set<?>> {
+    /**
+     * Constant to identify SetHelp through a String context.
+     */
+    public static final String IDENTIFIER = "SetHelp";
+
     SetHelp(final Set<?> value) {
         super(value);
     }

@@ -10,6 +10,11 @@ import java.util.Optional;
  * @since 2.0.0
  */
 final class StringHelp extends Help<String> {
+    /**
+     * Constant to identify StringHelp through a String context.
+     */
+    public static final String IDENTIFIER = "StringHelp";
+
     private static final String QUERY_OPENING_REGEX = ".*\\b";
     private static final String QUERY_CLOSING_REGEX = "\\b.*";
 
