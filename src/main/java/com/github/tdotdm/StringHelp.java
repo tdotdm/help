@@ -10,6 +10,9 @@ import java.util.Optional;
  * @since 2.0.0
  */
 final class StringHelp extends Help<String> {
+    private static final String QUERY_OPENING_REGEX = ".*\\b";
+    private static final String QUERY_CLOSING_REGEX = "\\b.*";
+
     StringHelp(final String value) {
         super(value);
     }
@@ -48,7 +51,7 @@ final class StringHelp extends Help<String> {
      * @return Whether StringHelp's value contains the given query.
      */
     boolean byConfirmingValueIsPresent(final String query) {
-        final String regex = ".*\\b" + query + "\\b.*";
+        final String regex = QUERY_OPENING_REGEX + query + QUERY_CLOSING_REGEX;
         return this.value.matches(regex);
     }
 
@@ -62,7 +65,7 @@ final class StringHelp extends Help<String> {
      * @return Whether StringHelp's value contains the given query.
      */
     boolean byConfirmingValueIsPresentIgnoringCase(final String query) {
-        final String regex = ".*\\b" + query.toLowerCase() + "\\b.*";
+        final String regex = QUERY_OPENING_REGEX + query.toLowerCase() + QUERY_CLOSING_REGEX;
         return this.value.toLowerCase().matches(regex);
     }
 }
