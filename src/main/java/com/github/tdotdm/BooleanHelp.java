@@ -7,8 +7,8 @@ package com.github.tdotdm;
  * @author Darryn McGaw
  * @since 2.0.0
  */
-public final class BooleanHelp extends Help<Boolean> {
-    public BooleanHelp(final Boolean value) {
+final class BooleanHelp extends Help<Boolean> {
+    BooleanHelp(final Boolean value) {
         super(value);
     }
 
@@ -36,8 +36,8 @@ public final class BooleanHelp extends Help<Boolean> {
      * @param valueWhenFalse The String to return when BooleanHelp's value is false.
      * @return The value depending on the state of the class's value.
      */
-    public String byReturning(final String valueWhenTrue,
-                              final String valueWhenFalse) {
+    String byReturning(final String valueWhenTrue,
+                       final String valueWhenFalse) {
         validate(valueWhenTrue, "Illegal 'valueWhenTrue'.");
         validate(valueWhenFalse, "Illegal 'valueWhenFalse'.");
 
@@ -53,9 +53,9 @@ public final class BooleanHelp extends Help<Boolean> {
      * @param defaultValue   The String to return when BooleanHelp's value is null.
      * @return The value depending on the state of the class's value.
      */
-    public String byReturning(final String valueWhenTrue,
-                              final String valueWhenFalse,
-                              final String defaultValue) {
+    String byReturning(final String valueWhenTrue,
+                       final String valueWhenFalse,
+                       final String defaultValue) {
         if (valueWhenTrue == null || valueWhenFalse == null) {
             return defaultValue;
         }

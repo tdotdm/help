@@ -9,8 +9,8 @@ import java.util.Optional;
  * @author Darryn McGaw
  * @since 2.0.0
  */
-public final class StringHelp extends Help<String> {
-    public StringHelp(final String value) {
+final class StringHelp extends Help<String> {
+    StringHelp(final String value) {
         super(value);
     }
 
@@ -19,7 +19,7 @@ public final class StringHelp extends Help<String> {
      *
      * @return StringHelp's value, wherein, all whitespace has been removed.
      */
-    public String byRemovingWhitespace() {
+    String byRemovingWhitespace() {
         return this.value.replaceAll("\\s+", "");
     }
 
@@ -29,7 +29,7 @@ public final class StringHelp extends Help<String> {
      * @return An Optional, wherein, the present value
      * will be an Integer representation of StringHelp's value.
      */
-    public Optional<Integer> byConvertingToInteger() {
+    Optional<Integer> byConvertingToInteger() {
         try {
             final int result = Integer.parseInt(this.value);
             return Optional.of(result);

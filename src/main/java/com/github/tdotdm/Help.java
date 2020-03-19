@@ -6,7 +6,7 @@ package com.github.tdotdm;
  * @author Darryn McGaw
  * @since 2.0.0
  */
-public class Help<T> {
+class Help<T> {
     /**
      * The value all subsequent method
      * calls will interact with.
@@ -18,7 +18,7 @@ public class Help<T> {
      *
      * @param value The value all subsequent method calls will interact with.
      */
-    public Help(final T value) {
+    Help(final T value) {
         if (value == null) {
             throw new IllegalArgumentException("Cannot create Help from illegal argument.");
         }
@@ -30,7 +30,7 @@ public class Help<T> {
      *
      * @return The Help's generic Value.
      */
-    public T getValue() {
+    T getValue() {
         return this.value;
     }
 }

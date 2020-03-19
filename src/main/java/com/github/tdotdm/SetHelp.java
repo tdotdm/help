@@ -11,8 +11,8 @@ import java.util.Set;
  * @author Darryn McGaw
  * @since 2.0.0
  */
-public final class SetHelp extends Help<Set<?>> {
-    public SetHelp(final Set<?> value) {
+final class SetHelp extends Help<Set<?>> {
+    SetHelp(final Set<?> value) {
         super(value);
     }
 
@@ -21,7 +21,7 @@ public final class SetHelp extends Help<Set<?>> {
      *
      * @return A new List with the same entries as the class's value.
      */
-    public List<?> byChangingToList() {
+    List<?> byChangingToList() {
         return new ArrayList<>(this.value);
     }
 }
