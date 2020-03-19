@@ -57,78 +57,78 @@ public class StringHelpTest {
     }
 
     @Test
-    public void byConfirmingValueIsPresent_ShouldReturnTrue_WhenValueIsPresent() {
+    public void byConfirmingQueryIsIndependentlyPresent_ShouldReturnTrue_WhenValueIsPresent() {
         //given
         final StringHelp target = new StringHelp("Women is plural for woman.");
         final String query = "woman";
 
         //when
-        final boolean result = target.byConfirmingValueIsPresent(query);
+        final boolean result = target.byConfirmingQueryIsIndependentlyPresent(query);
 
         //then
         assertThat(result).isTrue();
     }
 
     @Test
-    public void byConfirmingValueIsPresent_ShouldReturnFalse_WhenValueIsNotPresent() {
+    public void byConfirmingQueryIsIndependentlyPresent_ShouldReturnFalse_WhenValueIsNotPresent() {
         //given
         final StringHelp target = new StringHelp("Women is plural for woman.");
         final String query = "men";
 
         //when
-        final boolean result = target.byConfirmingValueIsPresent(query);
+        final boolean result = target.byConfirmingQueryIsIndependentlyPresent(query);
 
         //then
         assertThat(result).isFalse();
     }
 
     @Test
-    public void byConfirmingValueIsPresent_ShouldReturnFalse_WhenValueHasDifferentCase() {
+    public void byConfirmingQueryIsIndependentlyPresent_ShouldReturnFalse_WhenValueHasDifferentCase() {
         //given
         final StringHelp target = new StringHelp("Women is plural for woman.");
         final String query = "women";
 
         //when
-        final boolean result = target.byConfirmingValueIsPresent(query);
+        final boolean result = target.byConfirmingQueryIsIndependentlyPresent(query);
 
         //then
         assertThat(result).isFalse();
     }
 
     @Test
-    public void byConfirmingValueIsPresentIgnoringCase_ShouldReturnTrue_WhenValueIsPresent() {
+    public void byConfirmingQueryIsIndependentlyPresentIgnoringCase_ShouldReturnTrue_WhenValueIsPresent() {
         //given
         final StringHelp target = new StringHelp("Women is plural for woman.");
         final String query = "woman";
 
         //when
-        final boolean result = target.byConfirmingValueIsPresentIgnoringCase(query);
+        final boolean result = target.byConfirmingQueryIsIndependentlyPresentIgnoringCase(query);
 
         //then
         assertThat(result).isTrue();
     }
 
     @Test
-    public void byConfirmingValueIsPresentIgnoringCase_ShouldReturnFalse_WhenValueIsNotPresent() {
+    public void byConfirmingQueryIsIndependentlyPresentIgnoringCase_ShouldReturnFalse_WhenValueIsNotPresent() {
         //given
         final StringHelp target = new StringHelp("Women is plural for woman.");
         final String query = "men";
 
         //when
-        final boolean result = target.byConfirmingValueIsPresentIgnoringCase(query);
+        final boolean result = target.byConfirmingQueryIsIndependentlyPresentIgnoringCase(query);
 
         //then
         assertThat(result).isFalse();
     }
 
     @Test
-    public void byConfirmingValueIsPresentIgnoringCase_ShouldReturnTrue_WhenValueHasDifferentCase() {
+    public void byConfirmingQueryIsIndependentlyPresentIgnoringCase_ShouldReturnTrue_WhenValueHasDifferentCase() {
         //given
         final StringHelp target = new StringHelp("Women is plural for woman.");
         final String query = "women";
 
         //when
-        final boolean result = target.byConfirmingValueIsPresentIgnoringCase(query);
+        final boolean result = target.byConfirmingQueryIsIndependentlyPresentIgnoringCase(query);
 
         //then
         assertThat(result).isTrue();

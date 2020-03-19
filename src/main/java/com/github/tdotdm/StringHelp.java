@@ -43,28 +43,30 @@ final class StringHelp extends Help<String> {
 
     /**
      * Confirm whether StringHelp's value contains
-     * the exact given value. For example, given StringHelp's
-     * value is 'women', querying for 'men' will return false.
+     * the exact given query both wholly & independently.
+     * For example, given StringHelp's value is 'women',
+     * querying for 'men' will return false.
      * Please note that this method is case sensitive.
      *
      * @param query The value to search StringHelp's value for.
      * @return Whether StringHelp's value contains the given query.
      */
-    boolean byConfirmingValueIsPresent(final String query) {
+    boolean byConfirmingQueryIsIndependentlyPresent(final String query) {
         final String regex = QUERY_OPENING_REGEX + query + QUERY_CLOSING_REGEX;
         return this.value.matches(regex);
     }
 
     /**
      * Confirm whether StringHelp's value contains
-     * the exact given value. For example, given StringHelp's
-     * value is 'women', querying for 'men' will return false.
+     * the exact given query both wholly & independently.
+     * For example, given StringHelp's value is 'women',
+     * querying for 'men' will return false.
      * Please note that this method is case insensitive.
      *
      * @param query The value to search StringHelp's value for.
      * @return Whether StringHelp's value contains the given query.
      */
-    boolean byConfirmingValueIsPresentIgnoringCase(final String query) {
+    boolean byConfirmingQueryIsIndependentlyPresentIgnoringCase(final String query) {
         final String regex = QUERY_OPENING_REGEX + query.toLowerCase() + QUERY_CLOSING_REGEX;
         return this.value.toLowerCase().matches(regex);
     }
