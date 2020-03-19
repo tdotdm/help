@@ -94,4 +94,43 @@ public class StringHelpTest {
         //then
         assertThat(result).isFalse();
     }
+
+    @Test
+    public void byConfirmingValueIsPresentIgnoringCase_ShouldReturnTrue_WhenValueIsPresent() {
+        //given
+        final StringHelp target = new StringHelp("Women is plural for woman.");
+        final String query = "woman";
+
+        //when
+        final boolean result = target.byConfirmingValueIsPresentIgnoringCase(query);
+
+        //then
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    public void byConfirmingValueIsPresentIgnoringCase_ShouldReturnFalse_WhenValueIsNotPresent() {
+        //given
+        final StringHelp target = new StringHelp("Women is plural for woman.");
+        final String query = "men";
+
+        //when
+        final boolean result = target.byConfirmingValueIsPresentIgnoringCase(query);
+
+        //then
+        assertThat(result).isFalse();
+    }
+
+    @Test
+    public void byConfirmingValueIsPresentIgnoringCase_ShouldReturnTrue_WhenValueHasDifferentCase() {
+        //given
+        final StringHelp target = new StringHelp("Women is plural for woman.");
+        final String query = "women";
+
+        //when
+        final boolean result = target.byConfirmingValueIsPresentIgnoringCase(query);
+
+        //then
+        assertThat(result).isTrue();
+    }
 }

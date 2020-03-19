@@ -51,4 +51,18 @@ final class StringHelp extends Help<String> {
         final String regex = ".*\\b" + query + "\\b.*";
         return this.value.matches(regex);
     }
+
+    /**
+     * Confirm whether StringHelp's value contains
+     * the exact given value. For example, given StringHelp's
+     * value is 'women', querying for 'men' will return false.
+     * Please note that this method is case insensitive.
+     *
+     * @param query The value to search StringHelp's value for.
+     * @return Whether StringHelp's value contains the given query.
+     */
+    boolean byConfirmingValueIsPresentIgnoringCase(final String query) {
+        final String regex = ".*\\b" + query.toLowerCase() + "\\b.*";
+        return this.value.toLowerCase().matches(regex);
+    }
 }
