@@ -6,7 +6,7 @@ package com.github.tdotdm;
  * @author Darryn McGaw
  * @since 2.0.0
  */
-class Help<T> {
+abstract class Help<T> {
     /**
      * The value all subsequent method
      * calls will interact with.
