@@ -1,5 +1,7 @@
 package com.github.tdotdm;
 
+import org.apache.log4j.Logger;
+
 import java.util.List;
 import java.util.Set;
 
@@ -9,7 +11,10 @@ import java.util.Set;
  * @author Darryn McGaw
  * @since 2.0.0
  */
+@SuppressWarnings("MultipleStringLiterals")
 public abstract class HelpFactory {
+    private static final Logger LOGGER = Logger.getLogger(HelpFactory.class);
+
     /**
      * Return a new instance of BooleanHelp.
      *
@@ -17,6 +22,9 @@ public abstract class HelpFactory {
      * @return A new instance of BooleanHelp.
      */
     public static BooleanHelp help(final Boolean value) {
+        final String logMessage = "Returning new instance of '" + BooleanHelp.IDENTIFIER + "' with value '" + value + "'.";
+        LoggerAdapter.debug(LOGGER, logMessage);
+
         return new BooleanHelp(value);
     }
 
@@ -27,6 +35,9 @@ public abstract class HelpFactory {
      * @return A new instance of IntegerHelp.
      */
     public static IntegerHelp help(final Integer value) {
+        final String logMessage = "Returning new instance of '" + IntegerHelp.IDENTIFIER + "' with value '" + value + "'.";
+        LoggerAdapter.debug(LOGGER, logMessage);
+
         return new IntegerHelp(value);
     }
 
@@ -37,6 +48,9 @@ public abstract class HelpFactory {
      * @return A new instance of ListHelp.
      */
     public static ListHelp help(final List<?> value) {
+        final String logMessage = "Returning new instance of '" + ListHelp.IDENTIFIER + "' with value '" + value + "'.";
+        LoggerAdapter.debug(LOGGER, logMessage);
+
         return new ListHelp(value);
     }
 
@@ -47,6 +61,9 @@ public abstract class HelpFactory {
      * @return A new instance of SetHelp.
      */
     public static SetHelp help(final Set<?> value) {
+        final String logMessage = "Returning new instance of '" + SetHelp.IDENTIFIER + "' with value '" + value + "'.";
+        LoggerAdapter.debug(LOGGER, logMessage);
+
         return new SetHelp(value);
     }
 
@@ -57,6 +74,9 @@ public abstract class HelpFactory {
      * @return A new instance of StringHelp.
      */
     public static StringHelp help(final String value) {
+        final String logMessage = "Returning new instance of '" + StringHelp.IDENTIFIER + "' with value '" + value + "'.";
+        LoggerAdapter.debug(LOGGER, logMessage);
+
         return new StringHelp(value);
     }
 }
