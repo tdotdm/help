@@ -15,8 +15,10 @@ final class StringHelp extends Help<String> {
      */
     public static final String IDENTIFIER = "StringHelp";
 
-    private static final String QUERY_OPENING_REGEX = ".*\\b";
-    private static final String QUERY_CLOSING_REGEX = "\\b.*";
+    private static final String EMPTY_STRING = "";
+    private static final String REGEX_WHITESPACE = "\\s+";
+    private static final String REGEX_QUERY_AFTER = ".*\\b";
+    private static final String REGEX_QUERY_BEFORE = "\\b.*";
 
     StringHelp(final String value) {
         super(value);
@@ -28,7 +30,7 @@ final class StringHelp extends Help<String> {
      * @return StringHelp's value, wherein, all whitespace has been removed.
      */
     String byRemovingWhitespace() {
-        return this.value.replaceAll("\\s+", "");
+        return this.value.replaceAll(REGEX_WHITESPACE, EMPTY_STRING);
     }
 
     /**
@@ -57,7 +59,7 @@ final class StringHelp extends Help<String> {
      * @return Whether StringHelp's value contains the given query.
      */
     boolean byConfirmingQueryIsIndependentlyPresent(final String query) {
-        final String regex = QUERY_OPENING_REGEX + query + QUERY_CLOSING_REGEX;
+        final String regex = REGEX_QUERY_AFTER + query + REGEX_QUERY_BEFORE;
         return this.value.matches(regex);
     }
 
@@ -72,7 +74,7 @@ final class StringHelp extends Help<String> {
      * @return Whether StringHelp's value contains the given query.
      */
     boolean byConfirmingQueryIsIndependentlyPresentIgnoringCase(final String query) {
-        final String regex = QUERY_OPENING_REGEX + query.toLowerCase() + QUERY_CLOSING_REGEX;
+        final String regex = REGEX_QUERY_AFTER + query.toLowerCase() + REGEX_QUERY_BEFORE;
         return this.value.toLowerCase().matches(regex);
     }
 }
