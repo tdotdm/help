@@ -17,8 +17,8 @@ final class StringHelp extends Help<String> {
 
     private static final String EMPTY_STRING = "";
     private static final String REGEX_WHITESPACE = "\\s+";
-    private static final String REGEX_QUERY_AFTER = ".*\\b";
-    private static final String REGEX_QUERY_BEFORE = "\\b.*";
+    private static final String REGEX_QUERY_LEFT = ".*\\b";
+    private static final String REGEX_QUERY_RIGHT = "\\b.*";
 
     StringHelp(final String value) {
         super(value);
@@ -59,7 +59,7 @@ final class StringHelp extends Help<String> {
      * @return Whether StringHelp's value contains the given query.
      */
     boolean byConfirmingQueryIsIndependentlyPresent(final String query) {
-        final String regex = REGEX_QUERY_AFTER + query + REGEX_QUERY_BEFORE;
+        final String regex = REGEX_QUERY_LEFT + query + REGEX_QUERY_RIGHT;
         return this.value.matches(regex);
     }
 
@@ -74,7 +74,7 @@ final class StringHelp extends Help<String> {
      * @return Whether StringHelp's value contains the given query.
      */
     boolean byConfirmingQueryIsIndependentlyPresentIgnoringCase(final String query) {
-        final String regex = REGEX_QUERY_AFTER + query.toLowerCase() + REGEX_QUERY_BEFORE;
+        final String regex = REGEX_QUERY_LEFT + query.toLowerCase() + REGEX_QUERY_RIGHT;
         return this.value.toLowerCase().matches(regex);
     }
 }
