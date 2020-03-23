@@ -6,8 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Utility class strictly concerned
- * with a List value.
+ * Utility class strictly concerned with a List value.
  *
  * @author Darryn McGaw
  * @since 2.0.0

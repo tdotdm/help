@@ -3,8 +3,7 @@ package com.github.tdotdm;
 import java.util.Optional;
 
 /**
- * Utility class strictly concerned
- * with a String value.
+ * Utility class strictly concerned with a String value.
  *
  * @author Darryn McGaw
  * @since 2.0.0

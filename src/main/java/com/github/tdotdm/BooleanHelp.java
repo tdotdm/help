@@ -1,8 +1,7 @@
 package com.github.tdotdm;
 
 /**
- * Utility class strictly concerned
- * with a Boolean value.
+ * Utility class strictly concerned with a Boolean value.
  *
  * @author Darryn McGaw
  * @since 2.0.0
@@ -39,7 +38,7 @@ final class BooleanHelp extends Help<Boolean> {
      *
      * @param valueWhenTrue  The String to return when BooleanHelp's value is true.
      * @param valueWhenFalse The String to return when BooleanHelp's value is false.
-     * @return The value depending on the state of the class's value.
+     * @return The value depending on the state of BooleanHelp's value.
      */
     String byReturning(final String valueWhenTrue,
                        final String valueWhenFalse) {
@@ -55,8 +54,9 @@ final class BooleanHelp extends Help<Boolean> {
      *
      * @param valueWhenTrue  The String to return when BooleanHelp's value is true.
      * @param valueWhenFalse The String to return when BooleanHelp's value is false.
-     * @param defaultValue   The String to return when BooleanHelp's value is null.
-     * @return The value depending on the state of the class's value.
+     * @param defaultValue   The String to return when either valueWhenTrue or valueWhenFalse
+     *                       is null.
+     * @return The value depending on the state of BooleanHelp's value.
      */
     String byReturning(final String valueWhenTrue,
                        final String valueWhenFalse,

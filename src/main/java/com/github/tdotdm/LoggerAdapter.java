@@ -3,8 +3,7 @@ package com.github.tdotdm;
 import org.apache.log4j.Logger;
 
 /**
- * Class concerned with adding "syntactic sugar"
- * to the logging functionality.
+ * Class concerned with adding "syntactic sugar" to the logging functionality.
  *
  * @author Darryn McGaw
  * @since 3.1.0

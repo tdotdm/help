@@ -1,8 +1,7 @@
 package com.github.tdotdm;
 
 /**
- * Utility class strictly concerned
- * with an Integer value.
+ * Utility class strictly concerned with an Integer value.
  *
  * @author Darryn McGaw
  * @since 2.0.0

@@ -5,8 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Utility class strictly concerned
- * with a Set value.
+ * Utility class strictly concerned with a Set value.
  *
  * @author Darryn McGaw
  * @since 2.0.0
