@@ -7,6 +7,10 @@ package com.github.tdotdm;
  * @since 2.0.0
  */
 final class HelpException extends RuntimeException {
+    HelpException() {
+        //ignore
+    }
+
     HelpException(final String message) {
         super(message);
     }
