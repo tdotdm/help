@@ -58,8 +58,8 @@ final class LoggerAdapter {
     }
 
     /**
-     * If the logging level is set to "ERROR",
-     * log the message.
+     * Log the given message with the type
+     * set to 'ERROR'.
      *
      * @param message The message to log.
      */
