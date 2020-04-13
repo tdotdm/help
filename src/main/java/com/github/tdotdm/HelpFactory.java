@@ -11,7 +11,6 @@ import java.util.Set;
  * @author Darryn McGaw
  * @since 2.0.0
  */
-@SuppressWarnings("MultipleStringLiterals")
 public abstract class HelpFactory {
     private static final Logger LOGGER = Logger.getLogger(HelpFactory.class);
 
