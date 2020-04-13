@@ -14,6 +14,11 @@ abstract class Help<T> {
     protected final T value;
 
     /**
+     * The logger.
+     */
+    protected final LoggerAdapter log = new LoggerAdapter(Help.class);
+
+    /**
      * Create a new instance of Help.
      *
      * @param value The value all subsequent method calls will interact with.

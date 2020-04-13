@@ -1,7 +1,5 @@
 package com.github.tdotdm;
 
-import org.apache.log4j.Logger;
-
 import java.util.List;
 import java.util.Set;
 
@@ -12,7 +10,7 @@ import java.util.Set;
  * @since 2.0.0
  */
 public abstract class HelpFactory {
-    private static final Logger LOGGER = Logger.getLogger(HelpFactory.class);
+    private static final LoggerAdapter LOG = new LoggerAdapter(HelpFactory.class);
 
     private static String createLogMessage(final String helpIdentifier,
                                            final Object helpValue) {
@@ -27,7 +25,7 @@ public abstract class HelpFactory {
      */
     public static BooleanHelp help(final Boolean value) {
         final String logMessage = createLogMessage(BooleanHelp.IDENTIFIER, value);
-        LoggerAdapter.debug(LOGGER, logMessage);
+        LOG.debug(logMessage);
 
         return new BooleanHelp(value);
     }
@@ -40,7 +38,7 @@ public abstract class HelpFactory {
      */
     public static IntegerHelp help(final Integer value) {
         final String logMessage = createLogMessage(IntegerHelp.IDENTIFIER, value);
-        LoggerAdapter.debug(LOGGER, logMessage);
+        LOG.debug(logMessage);
 
         return new IntegerHelp(value);
     }
@@ -53,7 +51,7 @@ public abstract class HelpFactory {
      */
     public static ListHelp help(final List<?> value) {
         final String logMessage = createLogMessage(ListHelp.IDENTIFIER, value);
-        LoggerAdapter.debug(LOGGER, logMessage);
+        LOG.debug(logMessage);
 
         return new ListHelp(value);
     }
@@ -66,7 +64,7 @@ public abstract class HelpFactory {
      */
     public static SetHelp help(final Set<?> value) {
         final String logMessage = createLogMessage(SetHelp.IDENTIFIER, value);
-        LoggerAdapter.debug(LOGGER, logMessage);
+        LOG.debug(logMessage);
 
         return new SetHelp(value);
     }
@@ -79,7 +77,7 @@ public abstract class HelpFactory {
      */
     public static StringHelp help(final String value) {
         final String logMessage = createLogMessage(StringHelp.IDENTIFIER, value);
-        LoggerAdapter.debug(LOGGER, logMessage);
+        LOG.debug(logMessage);
 
         return new StringHelp(value);
     }
