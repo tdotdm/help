@@ -11,6 +11,7 @@ import java.util.Optional;
  * @author Darryn McGaw
  * @since 2.0.0
  */
+@SuppressWarnings("MultipleStringLiterals")
 final class StringHelp extends Help<String> {
     /**
      * Constant to identify StringHelp through a String context.
@@ -84,8 +85,8 @@ final class StringHelp extends Help<String> {
      * Change StringHelp's value from one
      * given timestamp format to another. If
      * an exception occurs whilst formatting
-     * StringHelp's value, then StringHelp's value
-     * will be returned.
+     * StringHelp's value, then StringHelp's unformatted
+     * value will be returned.
      *
      * @param currentFormat The current format of StringHelp's timestamp value.
      * @param desiredFormat The desired format of StringHelp's timestamp value.
@@ -101,13 +102,15 @@ final class StringHelp extends Help<String> {
             final SimpleDateFormat currentSDF = new SimpleDateFormat(currentFormat);
             final Date valueAsDate = currentSDF.parse(this.value);
             final SimpleDateFormat desiredSDF = new SimpleDateFormat(desiredFormat);
-
             final String formattedValue = desiredSDF.format(valueAsDate);
+
+            log.info("Converted '" + currentFormat + "' to '" + desiredFormat + "'.");
             return formattedValue;
         } catch (final ParseException e) {
-            //ignore
+            log.error("Cannot convert '" + this.value + "' with format '" + currentFormat + "'.");
         }
 
+        log.info("Returning given value of '" + this.value + "'.");
         return this.value;
     }
 }
