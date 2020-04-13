@@ -133,4 +133,60 @@ public class StringHelpTest {
         //then
         assertThat(result).isTrue();
     }
+
+    @Test
+    public void byFormattingTimestamp_ShouldThrowException_WhenFirstArgumentIsNull() {
+        //given
+        final StringHelp target = new StringHelp("2020-01-23T12:51:50.217");
+
+        //then
+        assertThatThrownBy(() -> target.byFormattingTimestamp(null, "yyyy-MM-dd'T'HH:mm:ss"))
+                .isInstanceOf(HelpException.class);
+    }
+
+    @Test
+    public void byFormattingTimestamp_ShouldThrowException_WhenSecondArgumentIsNull() {
+        //given
+        final StringHelp target = new StringHelp("2020-01-23T12:51:50.217");
+
+        //then
+        assertThatThrownBy(() -> target.byFormattingTimestamp("yyyy-MM-dd'T'HH:mm:ss.SSS", null))
+                .isInstanceOf(HelpException.class);
+    }
+
+    @Test
+    public void byFormattingTimestamp_ShouldReturnExpectedFormat() {
+        //given
+        final StringHelp target = new StringHelp("2020-01-23T12:51:50.217");
+
+        //when
+        final String result = target.byFormattingTimestamp("yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss");
+
+        //then
+        assertThat(result).isEqualTo("2020-01-23T12:51:50");
+    }
+
+    @Test
+    public void byFormattingTimestamp_ShouldReturnValue_WhenMismatchingArguments() {
+        //given
+        final StringHelp target = new StringHelp("2020-01-23T12:51:50");
+
+        //when
+        final String result = target.byFormattingTimestamp("yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd");
+
+        //then
+        assertThat(result).isEqualTo("2020-01-23T12:51:50");
+    }
+
+    @Test
+    public void byFormattingTimestamp_ShouldReturnValue_WhenValueIsNotATimestamp() {
+        //given
+        final StringHelp target = new StringHelp("not-a-timestamp-value");
+
+        //when
+        final String result = target.byFormattingTimestamp("yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd");
+
+        //then
+        assertThat(result).isEqualTo("not-a-timestamp-value");
+    }
 }

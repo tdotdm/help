@@ -1,5 +1,8 @@
 package com.github.tdotdm;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Optional;
 
 /**
@@ -75,5 +78,36 @@ final class StringHelp extends Help<String> {
     boolean byConfirmingQueryIsIndependentlyPresentIgnoringCase(final String query) {
         final String regex = REGEX_QUERY_LEFT + query.toLowerCase() + REGEX_QUERY_RIGHT;
         return this.value.toLowerCase().matches(regex);
+    }
+
+    /**
+     * Change StringHelp's value from one
+     * given timestamp format to another. If
+     * an exception occurs whilst formatting
+     * StringHelp's value, then StringHelp's value
+     * will be returned.
+     *
+     * @param currentFormat The current format of StringHelp's timestamp value.
+     * @param desiredFormat The desired format of StringHelp's timestamp value.
+     * @return StringHelp's formatted value or unformatted value.
+     */
+    String byFormattingTimestamp(final String currentFormat,
+                                 final String desiredFormat) {
+        if (currentFormat == null || desiredFormat == null) {
+            throw new HelpException("Cannot operate with illegal timestamp format(s).");
+        }
+
+        try {
+            final SimpleDateFormat currentSDF = new SimpleDateFormat(currentFormat);
+            final Date valueAsDate = currentSDF.parse(this.value);
+            final SimpleDateFormat desiredSDF = new SimpleDateFormat(desiredFormat);
+
+            final String formattedValue = desiredSDF.format(valueAsDate);
+            return formattedValue;
+        } catch (final ParseException e) {
+            //ignore
+        }
+
+        return this.value;
     }
 }
