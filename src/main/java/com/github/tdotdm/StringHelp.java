@@ -1,5 +1,7 @@
 package com.github.tdotdm;
 
+import org.jsoup.Jsoup;
+
 import java.util.Optional;
 
 /**
@@ -9,7 +11,7 @@ import java.util.Optional;
  * @author Darryn McGaw
  * @since 2.0.0
  */
-final class StringHelp extends Help<String> {
+public final class StringHelp extends Help<String> {
     private static final String QUERY_OPENING_REGEX = ".*\\b";
     private static final String QUERY_CLOSING_REGEX = "\\b.*";
 
@@ -22,7 +24,7 @@ final class StringHelp extends Help<String> {
      *
      * @return StringHelp's value, wherein, all whitespace has been removed.
      */
-    String byRemovingWhitespace() {
+    public String byRemovingWhitespace() {
         return this.value.replaceAll("\\s+", "");
     }
 
@@ -32,7 +34,7 @@ final class StringHelp extends Help<String> {
      * @return An Optional, wherein, the present value
      * will be an Integer representation of StringHelp's value.
      */
-    Optional<Integer> byConvertingToInteger() {
+    public Optional<Integer> byConvertingToInteger() {
         try {
             final int result = Integer.parseInt(this.value);
             return Optional.of(result);
@@ -51,7 +53,7 @@ final class StringHelp extends Help<String> {
      * @param query The value to search StringHelp's value for.
      * @return Whether StringHelp's value contains the given query.
      */
-    boolean byConfirmingQueryIsIndependentlyPresent(final String query) {
+    public boolean byConfirmingQueryIsIndependentlyPresent(final String query) {
         final String regex = QUERY_OPENING_REGEX + query + QUERY_CLOSING_REGEX;
         return this.value.matches(regex);
     }
@@ -66,8 +68,17 @@ final class StringHelp extends Help<String> {
      * @param query The value to search StringHelp's value for.
      * @return Whether StringHelp's value contains the given query.
      */
-    boolean byConfirmingQueryIsIndependentlyPresentIgnoringCase(final String query) {
+    public boolean byConfirmingQueryIsIndependentlyPresentIgnoringCase(final String query) {
         final String regex = QUERY_OPENING_REGEX + query.toLowerCase() + QUERY_CLOSING_REGEX;
         return this.value.toLowerCase().matches(regex);
+    }
+
+    /**
+     * Remove all HTML elements from value.
+     *
+     * @return Value with all HTML elements removed.
+     */
+    public String byRemovingHTMLElements() {
+        return Jsoup.parse(this.value).text();
     }
 }

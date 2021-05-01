@@ -12,7 +12,7 @@ import java.util.Set;
  * @author Darryn McGaw
  * @since 2.0.0
  */
-final class ListHelp extends Help<List<?>> {
+public final class ListHelp extends Help<List<?>> {
     ListHelp(final List<?> value) {
         super(value);
     }
@@ -22,7 +22,7 @@ final class ListHelp extends Help<List<?>> {
      *
      * @return A new List containing unique entries of ListHelp's value.
      */
-    List<?> byRemovingDuplicates() {
+    public List<?> byRemovingDuplicates() {
         final Set<?> valueSet = new HashSet<>(value);
 
         return new ArrayList<>(valueSet);

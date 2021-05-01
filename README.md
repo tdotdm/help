@@ -18,6 +18,7 @@ See below for details on all available methods.
 | 7 | byReturning | boolean | String | Return a given value (including a default value) depending on the state of a boolean value. |
 | 8 | byConfirmingQueryIsIndependentlyPresent | String | boolean | Confirm whether StringHelp's value contains the exact given query both wholly & independently (case sensitive). |
 | 9 | byConfirmingQueryIsIndependentlyPresentIgnoringCase | String | boolean | Confirm whether StringHelp's value contains the exact given query both wholly & independently (case insensitive). |
+| 10 | byRemovingHTMLElements | String | String | Remove all HTML elements from a String. |
 
 For a more concrete example, to use the method with id 5 (`byConvertingToInteger`), you can do the following:
 

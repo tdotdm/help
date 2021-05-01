@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.tdotdm</groupId>
     <artifactId>help</artifactId>
-    <version>3.0.0</version>
+    <version>3.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>Help is a collection of utility methods with a fluent interface.</description>
     <build>
@@ -53,6 +53,11 @@
             <artifactId>assertj-core</artifactId>
             <version>3.15.0</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.8.3</version>
         </dependency>
     </dependencies>
     <distributionManagement>
