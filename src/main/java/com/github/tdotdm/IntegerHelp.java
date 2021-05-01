@@ -7,7 +7,7 @@ package com.github.tdotdm;
  * @author Darryn McGaw
  * @since 2.0.0
  */
-final class IntegerHelp extends Help<Integer> {
+public final class IntegerHelp extends Help<Integer> {
     IntegerHelp(final Integer value) {
         super(value);
     }
@@ -21,8 +21,8 @@ final class IntegerHelp extends Help<Integer> {
      * @return Return true or false depending on whether IntegerHelp's value
      * exceeds the given limit.
      */
-    boolean byCheckingNotExceedingBoundary(final Integer lowerBoundary,
-                                                  final Integer upperBoundary) {
+    public boolean byCheckingNotExceedingBoundary(final Integer lowerBoundary,
+                                           final Integer upperBoundary) {
         if ((lowerBoundary.equals(upperBoundary)) || lowerBoundary > upperBoundary) {
             throw new HelpException("Lower is greater than Upper!");
         }
